@@ -1,4 +1,8 @@
 function PortfolioButton() {
-    alert("This is a Portfolio Button");
-    window.location.replace("portfolio.html")
+    window.location.href = "portfolio";
+}
+
+function SusButton() {
+    var OMGsfx = new Audio('OMG.mp3');
+    OMGsfx.play();
 }
