@@ -1,18 +1,25 @@
 body {
     background-color: #0f0f1f;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
     font-size: 24px;
     color: #5f5fff;
     text-align: center;
+    line-height: 2rem;
 }
+
+p {
+    font-family: "Chakra Petch", sans-serif;
+    padding: 3%;
+    animation: FadeIn 2s;
+}
+
 .title {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: #5f5fff;
     font-size: 5rem;
-    text-align: center;
     filter: drop-shadow(0px 0px 15px #5f5fff);
-    
-
-
+    text-align: center;
+    width: 100%;
     animation-name: FadeIn;
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
@@ -25,6 +32,43 @@ body {
     justify-content: space-around;
 }
 
+#portNavBar {
+    border-radius: 1rem;
+    width: 95%;
+    height: auto;
+    text-align: left;
+    padding: 2rem;
+    display: inline-block;
+    background-color: #1f1f2f;
+    animation-name: FadeInTop;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+
+/* #GamesList {
+    
+} */
+
+.Game {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0px;
+    width: 100%;
+}
+
+.gameImgL {
+    width: 200px;
+    animation: SlideInLeft 2s ease-out;
+}
+
+.gameImgR {
+    width: 600px;
+    animation: SlideInRight 2s ease-out;
+}
+
 button {
     background-color: #5f5fff;
     color: #2f2faf;
@@ -33,11 +77,29 @@ button {
     border-radius: 5px;
     transition: 0.5s;
     cursor: pointer;
+    padding: .5rem 1rem;
 }
 button:hover {
     background-color: #2f2faf;
     color: #5f5fff;
     scale: 1.1;
+}
+
+img {
+    border-radius: 1rem;
+    /* animation: FadeScroll ease-in-out;
+    animation-timeline: view(50% 10%); */
+}
+
+@keyframes FadeInTop {
+    from {
+        transform: translateY(-120px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
 
 @keyframes FadeIn {
@@ -46,5 +108,44 @@ button:hover {
     }
     to {
         opacity: 1;
+    }
+}
+
+@keyframes SlideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-300%);
+    }
+    25% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes SlideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(150%);
+    }
+    25% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes FadeScroll {
+    from {
+        opacity: 0;
+        margin-left: -25%;
+    }
+    to {
+        opacity: 1;
+        margin-left: 0%;
     }
 }
