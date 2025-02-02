@@ -17,11 +17,13 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <p class="title">CRYPTEDCODER</p>
+        <div id="TitleContainer">
+            <p class="title">CRYPTEDCODER</p>
+        </div>
         <br>
         <div id="navBar">
             <button class="btn" onclick="PortfolioButton()">Portfolio</button>
-            <button class="btn" onclick="GamesButton()">Games</button>
+            <button class="btn" onclick="GamesButton()" onmouseenter="GamesHover()">Games</button>
             <button class="btn" onclick="NothingButton()">Nothing</button>
             <button class="btn" id="SusBtn"onclick="SusButton()">Sus</button>
         </div>

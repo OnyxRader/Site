@@ -13,17 +13,23 @@ p {
     animation: FadeIn 2s;
 }
 
+#TitleContainer {
+    display: inline-block;
+    justify-content: center;
+}
+
 .title {
-    padding: 0;
+    padding: 10%;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: #5f5fff;
     font-size: 5rem;
     filter: drop-shadow(0px 0px 15px #5f5fff);
+    height: 5rem;
+    overflow: hidden;
     text-align: center;
+    vertical-align: middle;
     width: 100%;
-    animation-name: FadeIn;
-    animation-duration: 2s;
-    animation-timing-function: ease-in-out;
+    animation: typeIn 2s cubic-bezier(0, 0, .4, 1);
 }
 
 #navBar {
@@ -37,14 +43,16 @@ p {
     border-radius: 1rem;
     width: 95%;
     height: auto;
-    text-align: left;
     padding: 2rem;
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
     background-color: #1f1f2f;
     animation-name: FadeInTop;
     animation-duration: 2s;
     animation-timing-function: ease-out;
 }
+
+
 
 /* #GamesList {
     
@@ -91,19 +99,22 @@ p {
 }
 
 button {
-    background-color: #5f5fff;
-    color: #2f2faf;
+    background: transparent;
+    background-image: linear-gradient(to right, #5f5fff, #afafff 30%);
+    background-size: 300%;
+    color: #1f1f4f;
+    border: 2px solid black;
+    border-color: #afafff;
     font-size: 2rem;
-    border: none;
     border-radius: 5px;
     transition: 0.5s;
     cursor: pointer;
     padding: .5rem 1rem;
 }
+
 button:hover {
-    background-color: #2f2faf;
-    color: #5f5fff;
     scale: 1.1;
+    background-position: 20%
 }
 
 img {
@@ -168,5 +179,14 @@ img {
     to {
         opacity: 1;
         margin-left: 0%;
+    }
+}
+
+@keyframes typeIn {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
     }
 }

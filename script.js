@@ -1,4 +1,5 @@
 var nothingClicked = 0;
+
 function PortfolioButton() {
     window.location.href = "portfolio";
 }
